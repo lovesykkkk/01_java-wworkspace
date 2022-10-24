@@ -35,6 +35,8 @@ public class A_If {
 		 * 		.. 실행시키고자 하는 코드...
 		 * 	 }
 		 * 
+		 * 	 조건식은 if랑 친하다!!
+		 * 
 		 * 
 		 * 	=> 조건식이 참(true)일 경우 => 중괄호 블럭 안의 코드 실행
 		 * 	=> 조건식이 거짓(false)일 경우 => 중괄호 블럭 안의 코드 무시하고 넘어감
@@ -137,6 +139,7 @@ public class A_If {
 		String result;
 		
 		if(age <= 13) {
+			//String result = "어린이"
 			result = "어린이";
 		}else if (age <= 19) {
 			result = "청소년";
