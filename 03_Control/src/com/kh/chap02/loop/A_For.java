@@ -147,11 +147,6 @@ public class A_For {
 	}
 	
 	public void method7() {
-		// 사용자에게 값을 입력받아 1부터 입력받은 수까지의 합계출력
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.print("숫자 입력 :");
-		int num = sc.nextInt();
 		/*
 		int sum = 0;
 		
@@ -160,14 +155,29 @@ public class A_For {
 		....
 		sum += num;
 		*/
+		// 사용자에게 값을 입력받아 1부터 입력받은 수까지의 합계출력
+		Scanner sc = new Scanner(System.in);
 		
-		int sum = 0;
-		for(int i =1; i<=num ;i++) {
-			sum += i;
+		while(true) {
+		System.out.print("1이상의 정수 :");
+		int num = sc.nextInt();
+		
+		if(num >=1 ) { // 잘입력했을경우 => 1에서 부터 사용자가 입력한 수까지의 합계출력 후 빠져나감
+			int sum = 0;
+			for(int i =1; i<=num ;i++) {
+				sum += i;
+			}
+			
+			System.out.println("1부터 " + num + "까지의 합 : " + sum);
+			break;
+			
+		}else { // 잘못입력했을 경우 => 오류구문 출력 다시 받을 수 있게 유도
+			System.out.println("잘못입력했습니다. 다시입력해주세요.");
 		}
-		//1부터 3까지의 합 : xxx
-		System.out.println("1부터 " + num + "까지의 합 : " + sum);
 		
+		
+	
+		}
 		
 	}
 	public void method8() {

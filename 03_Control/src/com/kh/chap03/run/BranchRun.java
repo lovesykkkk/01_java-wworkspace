@@ -6,7 +6,9 @@ public class BranchRun {
 
 	public static void main(String[] args) {
 		A_Break a = new A_Break();
-		a.method1();
+		//a.method1();
+		//a.method2();
+		a.method3();
 	}
 
 }
