@@ -3,7 +3,7 @@ package com.kh.variable;
 public class A_Variable {
 	
 	//시급과 근무시간과 근무일수를 곱해서 월급을 계산해서 출력하는 메소드
-	public void printVariable() {
+	public void printVariable() { 
 		System.out.println("===== 변수 사용 전 =====");
 		
 		System.out.println("시급 : 9450원");
