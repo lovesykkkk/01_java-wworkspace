@@ -13,7 +13,6 @@ public class ConditionRun {
 		//a.method4();
 		//a.method5();
 		//a.method6();
-		//a.method7();
 		
 		B_Switch b = new B_Switch();
 		//b.method1();
