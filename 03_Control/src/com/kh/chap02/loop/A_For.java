@@ -357,6 +357,20 @@ public class A_For {
 		}
 	}
 	
+	public void method16_1() {
+		for(int i=1; i<=4 ; i++){
+			for(int j = 1; j<=4 ; j++) {
+				if(i == j) {
+					System.out.print(i);
+				}else {
+					System.out.print("*");
+				}
+			} // ****을 출력
+			System.out.println(); // 개행하자
+		}
+		
+	}
+	
 	public void method17() {
 		//2단부터 9단까지 출력
 		
