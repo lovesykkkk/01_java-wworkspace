@@ -94,7 +94,7 @@ public class A_Array {
 			System.out.println(arr[i]);
 		}
 		
-		System.out.println(arr); //실제 arr이라는 박스에는 "주소값" 이라는게 담겨있음 (뭔소리지? => method2)
+		System.out.println(arr); //실제 arr이라는 박스에는 "주소값" 이라는게 담겨있음 (뭔소리지? => method2) //그림그리기
 		
 		
 	}
@@ -378,6 +378,41 @@ public class A_Array {
 		
 		//4. 위에서 구해진 짝수들의 총합 출력
 		System.out.println("해당배열의 짝수의 총합 : " + sum);
+	}
+	
+	public void remind() {
+		/* 변수만을 가지고 프로그래밍을 했을 경우
+		int age1 = 15;
+		int age2 = 23;
+		int age3 = 50;
+		int age4 = 34;
+		int age5 = 25;
+		
+		// 반복문 사용 불가
+		for(int i=1; i<6; i++) {
+			//System.out.println(agei); //agei라는 변수명 찾고 있어서 안됨
+			//System.out.println(age + i); //age라는 변수명 찾고 있어서 안됨
+		}
+		*/
+		
+		//배열 가지고 프로그래밍
+		int[] ages = new int[5]; //그림 
+		
+		ages[0] = 15;
+		ages[1] = 23;
+		ages[2] = 50;
+		ages[3] = 34;
+		ages[4] = 25;
+		
+		int sum = 0;
+		for(int i=0; i<ages.length; i++) {
+			System.out.println(ages[i]);
+			// 나이 총 합계
+			// 누적합 공식 응용!
+			sum += ages[i];
+		}
+		
+		
 	}
 
 }
