@@ -372,6 +372,7 @@ public class ArrayPractice {
 		}
 	}
 	
+	// 새로운 개념 배우고 풀이
 	public void practice15() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("문자열 : ");
