@@ -99,6 +99,36 @@ public class ArrayPractice {
 		
 	}
 	
+	public void practice5_1() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("문자열 : ");
+		String str = sc.nextLine(); //apple
+		System.out.print("문자 : "); // p
+		char ch = sc.nextLine().charAt(0);
+		
+		// 배열 생성
+		char[] arr = new char[str.length()];
+		
+		for(int i=0; i<arr.length; i++) {
+			arr[i] = str.charAt(i);
+		}
+		
+		int count = 0;
+		System.out.print(str + "에 " + ch + "가 존재하는 위치(인덱스) : ");
+		for(int i=0; i<arr.length; i++) {
+			if(arr[i] == ch) {
+				System.out.print(i + " "); // 1 2 
+				count ++;
+			}
+		}
+		System.out.println();
+		System.out.println(ch + "개수 : " + count);
+		
+		sc.close();
+		
+		
+	}
+	
 	public void practice6() {
 		Scanner sc = new Scanner(System.in);
 		
@@ -281,7 +311,7 @@ public class ArrayPractice {
 	}
 	
 	public void practice12_1() {
-int[] arr = new int[10];
+		int[] arr = new int[10];
 		
 		
 		for(int i =0; i<arr.length; i++) {
@@ -307,6 +337,67 @@ int[] arr = new int[10];
 		System.out.println("최대값은 : " + max);
 		
 		
+	}
+	
+	public void practice13() {
+		int[] arr = new int[10];
+		for(int i =0; i<arr.length; i++) {
+			arr[i] = (int)(Math.random() *10 +1);
+			for(int j=0; j<i; j++) {
+				if(arr[i] == arr[j]) {
+					i--;
+				}
+			}
+			}
+		
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+	}
+	
+	public void practice14() {
+		int[] lotto = new int[6];
+		for(int i=0; i<lotto.length; i++) {
+			lotto[i] = (int)(Math.random()*45 +1);
+			for(int j=0; j<i; j++) {
+				if(lotto[i] == lotto[j]) {
+					i--;
+				}
+			}
+		}
+		
+		Arrays.sort(lotto);
+		for(int i=0; i<lotto.length; i++) {
+			System.out.print(lotto[i] + " ");
+		}
+	}
+	
+	public void practice15() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("문자열 : ");
+		String str = sc.nextLine();
+		
+		char[] arr = new char[str.length()];
+		
+		for(int i=0; i<arr.length; i++) {
+			arr[i] = str.charAt(i);
+		}
+		
+		
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<i; j++) {
+				if(arr[i] == arr[j]) {
+					
+				}
+			}
+			if(i == arr.length-1) {
+				System.out.print(arr[i]);
+				break;
+			}
+			System.out.print(arr[i] + ", ");
+		}
+		System.out.println();
+		System.out.println("문자개수 : " + str.length());
 	}
 	
 }
