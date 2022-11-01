@@ -434,7 +434,7 @@ public class ArrayPractice {
 	         System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
 	         char ch = sc.next().charAt(0);
 
-	         if (ch == 'y') {
+	         if (ch == 'y' || ch =='Y') {
 	            System.out.print("더 입력하고 싶은 개수 : ");
 	            num = sc.nextInt();
 	            sc.nextLine();
@@ -448,7 +448,7 @@ public class ArrayPractice {
 	            
 	            origin = copy;
 
-	         } else if (ch == 'n') {
+	         } else if (ch == 'n'|| ch =='N') {
 	            System.out.print("[");
 	            for (int i = 0; i < copy.length; i++) {
 	               if (i == copy.length - 1) {
