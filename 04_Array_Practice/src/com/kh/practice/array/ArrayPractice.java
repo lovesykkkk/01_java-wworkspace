@@ -375,30 +375,94 @@ public class ArrayPractice {
 	// 새로운 개념 배우고 풀이
 	public void practice15() {
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.print("문자열 : ");
 		String str = sc.nextLine();
 		
 		char[] arr = new char[str.length()];
-		
-		for(int i=0; i<arr.length; i++) {
+		int count = 0;
+
+		System.out.print("문자열에 있는 문자 : ");
+
+		for (int i = 0; i < arr.length; i++) {
 			arr[i] = str.charAt(i);
-		}
+			
+			boolean flag = true;
 		
-		
-		for(int i=0; i<arr.length; i++) {
-			for(int j=0; j<i; j++) {
-				if(arr[i] == arr[j]) {
-					
-				}
+			for (int j = 0; j < i; j++) {
+				if (arr[j] == arr[i])
+					flag = false;
 			}
-			if(i == arr.length-1) {
-				System.out.print(arr[i]);
-				break;
+			
+			if (flag) {
+				if (i == 0)
+					System.out.print(arr[i]);
+				else
+					System.out.print(", " + arr[i]);
+	                
+				count++;
 			}
-			System.out.print(arr[i] + ", ");
 		}
-		System.out.println();
-		System.out.println("문자개수 : " + str.length());
+
+		System.out.println("\n문자 개수 : " + count);
+		
+		sc.close();
 	}
+	
+	public void practice16() {
+
+	      Scanner sc = new Scanner(System.in);
+
+	      System.out.print("배열의 크기를 입력하세요 : ");
+	      int num = sc.nextInt();
+	      sc.nextLine();
+
+	      String[] origin = new String[num];
+
+	      // 배열 복사
+	      String[] copy = origin;
+	      // String[] copy = origin.clone();
+	      // String[] copy = Arrays.copyOf(origin, origin.length);
+
+	      for (int i = 0; i < origin.length; i++) {
+	         System.out.printf("%d번째 문자열 : ", i + 1);
+	         origin[i] = sc.nextLine();
+	      }
+
+	      while (true) {
+
+	         System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+	         char ch = sc.next().charAt(0);
+
+	         if (ch == 'y') {
+	            System.out.print("더 입력하고 싶은 개수 : ");
+	            num = sc.nextInt();
+	            sc.nextLine();
+
+	            copy = Arrays.copyOf(origin, origin.length + num);
+
+	            for (int i = origin.length; i < copy.length; i++) {
+	               System.out.printf("%d번째 문자열 : ", i + 1);
+	               copy[i] = sc.nextLine();
+	            }
+	            
+	            origin = copy;
+
+	         } else if (ch == 'n') {
+	            System.out.print("[");
+	            for (int i = 0; i < copy.length; i++) {
+	               if (i == copy.length - 1) {
+	                  System.out.printf("%s", copy[i]);
+	               } else {
+	                  System.out.printf("%s, ", copy[i]);
+	               }
+	            }
+	            System.out.print("]");
+	            break;
+	         }
+
+	      }
+
+	   }
 	
 }
