@@ -465,4 +465,104 @@ public class ArrayPractice {
 
 	   }
 	
+	
+	public void rps() {
+	      Scanner sc = new Scanner(System.in);
+	      
+	      System.out.print("당신의 이름을 입력해주세요 : ");
+	      String name = sc.nextLine();
+	      int total = 0;
+	         int win = 0;
+	         int tie = 0;
+	         int lose = 0;
+	      
+	      while(true) {
+	         System.out.print("가위바위보 : ");
+	         String rps = sc.nextLine();
+	         
+	         int random = (int)(Math.random()*3 + 1);
+	         
+	         
+	         
+	         if(rps.equals("가위") || rps.equals("바위") || rps.equals("보")) {
+	            
+	            switch(random) {
+	            
+	            case 1: // 가위
+	               if(rps.equals("가위")) {
+	                  System.out.println("컴퓨터 : 가위");
+	                  System.out.println(name+" :가위");
+	                  System.out.println("비겼습니다.");
+	                  System.out.println();
+	                  tie++;
+	               }else if(rps.equals("바위")) {
+	                  System.out.println("컴퓨터 : 가위");
+	                  System.out.println(name+" :바위");
+	                  System.out.println("이겼습니다 !");
+	                  System.out.println();
+	                  win++;
+	               }else if(rps.equals("보")) {
+	                  System.out.println("컴퓨터 : 가위");
+	                  System.out.println(name+" :보");
+	                  System.out.println("졌습니다 ㅠㅠ");
+	                  System.out.println();
+	                  lose++;
+	               }
+	               total++;
+	               break;
+	            case 2: // 바위
+	               if(rps.equals("가위")) {
+	                  System.out.println("컴퓨터 : 바위");
+	                  System.out.println(name+" :가위");
+	                  System.out.println("졌습니다 ㅠㅠ");
+	                  System.out.println();
+	                  lose++;
+	               }else if(rps.equals("바위")) {
+	                  System.out.println("컴퓨터 : 바위");
+	                  System.out.println(name+" :바위");
+	                  System.out.println("비겼습니다.");
+	                  System.out.println();
+	                  tie++;
+	               }else if(rps.equals("보")) {
+	                  System.out.println("컴퓨터 : 바위");
+	                  System.out.println(name+" :보");
+	                  System.out.println("이겼습니다 !");
+	                  System.out.println();
+	                  win++;
+	               }
+	               total++;
+	               break;
+	            case 3: //보 
+	               if(rps.equals("가위")) {
+	                  System.out.println("컴퓨터 : 보");
+	                  System.out.println(name+" :가위");
+	                  System.out.println("이겼습니다 !");
+	                  System.out.println();
+	                  win++;
+	               }else if(rps.equals("바위")) {
+	                  System.out.println("컴퓨터 : 보");
+	                  System.out.println(name+" :바위");
+	                  System.out.println("졌습니다 ㅠㅠ");
+	                  System.out.println();
+	                  lose++;
+	               }else if(rps.equals("보")) {
+	                  System.out.println("컴퓨터 : 보");
+	                  System.out.println(name+" :보");
+	                  System.out.println("비겼습니다.");
+	                  System.out.println();
+	                  tie++;
+	               }
+	               total++;
+	               break;
+	            }
+	         }else if(rps.equals("exit")) {
+	            System.out.println(total + "전 " + win + "승 " + tie + "무 " + lose + "패");
+	            return;
+	         }else {
+	            System.out.println("잘못 입력하셨습니다.");
+	            
+	         }
+	      }
+	   }
+	
 }

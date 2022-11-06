@@ -27,8 +27,16 @@ public class Product {
 	 * }
 	 */
 	
+	// 기본생성자
 	public Product() {
 		
+	}
+	
+	// 매개변수 생성자
+	public Product(String pName, int price, String brand) {
+		this.pName = pName;
+		this.price = price;
+		this.brand = brand;
 	}
 	
 	/*
