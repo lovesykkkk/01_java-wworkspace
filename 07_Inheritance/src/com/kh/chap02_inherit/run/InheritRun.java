@@ -17,6 +17,7 @@ public class InheritRun /*extends Object*/ {
 		System.out.println(s.information());
 		System.out.println(a.information());
 		
+		// 처음에는 그냥 움직인다로 출력
 		c.howToMove();
 		s.howToMove();
 		a.howToMove();

@@ -25,5 +25,11 @@ public class Child1 extends Parent {
 		System.out.println("나 첫번째 자식이야");
 	}
 	
+	//나중
+	@Override
+	public void print() {
+		System.out.println("나 첫번째 자식이야");
+	}
+	
 
 }

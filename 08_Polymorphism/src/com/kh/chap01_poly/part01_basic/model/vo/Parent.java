@@ -32,6 +32,11 @@ public class Parent {
 		System.out.println("나 부모야");
 	}
 	
+	//나중에
+	public void print() {
+		System.out.println("나 부모야");
+	}
+	
 	
 
 }
