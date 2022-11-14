@@ -6,8 +6,8 @@ import com.kh.practice.token.controller.TokenController;
 
 public class TokenMenu {
 
-	TokenController tc = new TokenController();
-	Scanner sc = new Scanner(System.in);
+	private TokenController tc = new TokenController();
+	private Scanner sc = new Scanner(System.in);
 
 	public void mainMenu() {
 
@@ -66,7 +66,7 @@ public class TokenMenu {
 		System.out.print("찾을 문자 하나를 입력하세요 : ");
 		char find = sc.nextLine().charAt(0);
 		
-		int count = tc.findChar(str1, find);
+		int count = tc.findChar2(str1, find);
 		// 반환 값 출력
 		System.out.println(find + "문자가 들어간 개수 : " + count );
 		

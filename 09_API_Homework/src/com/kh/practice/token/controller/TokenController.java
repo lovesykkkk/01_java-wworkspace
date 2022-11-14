@@ -41,6 +41,26 @@ public class TokenController {
 		return count;
 		
 	}
+	
+	public int findChar2(String input, char one){
+		// 매개변수의 문자가 문자열 안에 몇 개가 들어가 있는지 반환
+		String sOne = one + "";
+		char[] arr = input.toCharArray();
+		int count = 0;
+		
+		for(int i=0; i<arr.length; i++) {
+			char ch = arr[i];
+			String str = ch + "";
+			
+			if(str.contains(sOne)) {
+				count++;
+			}
+			
+			
+		}
+		return count;
+		
+	}
 
 	
 	
