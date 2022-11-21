@@ -28,7 +28,7 @@ public class LibraryRun {
 	public static void printBooks(ArrayList<Book> bs) {
 		BookController bc = new BookController();
 		
-		bc.addBook(bs);
+		//bc.addBook(bs);
 
 		/*
 		for (Book b : bs) {
