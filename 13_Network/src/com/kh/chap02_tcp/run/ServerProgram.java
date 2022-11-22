@@ -65,7 +65,7 @@ public class ServerProgram {
 				System.out.println("클라이언트로 부터 전달받은 메세지 : " + message);
 				
 				// 반대로 클라이언트에게 데이터 전달! (출력)
-				System.out.print("클라이언트에게 보낼 내용 : ");
+				System.out.print(socket.getInetAddress().getHostAddress() + " 클라이언트에게 보낼 내용 : ");
 				String sendMessage = sc.nextLine();
 				
 				pw.println(sendMessage); // 클라이언트에게 출력
