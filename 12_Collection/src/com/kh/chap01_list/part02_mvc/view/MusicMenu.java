@@ -6,16 +6,9 @@ import java.util.Scanner;
 import com.kh.chap01_list.part02_mvc.controller.MusicController;
 import com.kh.chap01_list.part02_mvc.model.vo.Music;
 // 화면을 담당하는 클래스 (출력문, 입력문)
+
 /**
- * @author SY
- *
- */
-/**
- * @author SY
- *
- */
-/**
- * @author SY
+ * @author user1
  *
  */
 public class MusicMenu {
